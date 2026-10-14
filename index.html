@@ -1,0 +1,707 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6ef">
+
+  <title>Анастасия Короткова — психолог и канистерапевт</title>
+  <meta name="description" content="Анастасия Короткова — психолог и канистерапевт в Костроме. Психологические занятия с участием золотистого ретривера. Запись на консультацию.">
+
+  <style>
+    :root {
+      --cream: #f8f6ef;
+      --paper: #fffdf8;
+      --green: #344e3c;
+      --green-light: #e5ebdf;
+      --text: #28332b;
+      --muted: #6e776d;
+      --accent: #c28b58;
+      --border: #e7e4da;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .brand small {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: transform .2s, background .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: white;
+      background: var(--green);
+    }
+
+    .button-primary:hover {
+      background: #253c2d;
+    }
+
+    .button-light {
+      border: 1px solid var(--border);
+      background: var(--paper);
+    }
+
+    .hero {
+      padding: 76px 0 82px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 56px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--green);
+      background: var(--green-light);
+      padding: 7px 13px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      margin: 22px 0;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      font-weight: 700;
+    }
+
+    h1 span {
+      color: var(--green);
+    }
+
+    .hero-text {
+      max-width: 510px;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      margin-top: 22px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .hero-photo {
+      min-height: 440px;
+      border-radius: 180px 180px 18px 18px;
+      background: #e5e2d5;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      display: block;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    .photo-placeholder {
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 35px;
+      text-align: center;
+      color: var(--green);
+    }
+
+    .photo-placeholder .paw {
+      font-size: 56px;
+      margin-bottom: 10px;
+    }
+
+    .photo-placeholder p {
+      max-width: 250px;
+font-size: 14px;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-white {
+      background: var(--paper);
+    }
+
+    .section-heading {
+      max-width: 660px;
+      margin: 0 auto 38px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .info-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .info-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .info-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .formats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .format-card {
+      padding: 26px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .format-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--green-light);
+      border-radius: 12px;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .format-card h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    .format-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .notice {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .contact-panel {
+      background: var(--green);
+      color: white;
+      padding: 44px;
+      border-radius: 18px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .contact-panel p {
+      color: #e0e8df;
+      margin-bottom: 0;
+    }
+
+    .contact-panel .button {
+      background: white;
+      color: var(--green);
+      white-space: nowrap;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .contact-item {
+      padding: 20px;
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .contact-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contact-item a,
+    .contact-item span {
+      color: var(--muted);
+      overflow-wrap: anywhere;
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 30px, 560px);
+      }
+
+      .header-inner {
+        align-items: flex-start;
+      }
+
+      nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        font-size: 12px;
+      }
+
+      nav .nav-contact {
+        display: none;
+      }
+
+      .hero {
+        padding: 42px 0 54px;
+      }
+
+      .hero-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .hero-photo {
+        min-height: 340px;
+        border-radius: 130px 130px 14px 14px;
+      }
+
+      .hero-photo img,
+      .photo-placeholder {
+        min-height: 340px;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      .formats,
+      .contact-details {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-panel {
+        grid-template-columns: 1fr;
+        padding: 28px;
+      }
+
+      .contact-panel .button {
+        justify-self: start;
+        white-space: normal;
+      }
+    }
+      .price-note {
+       display: inline-block;
+       margin-top: 14px;
+       padding: 10px 15px;
+       border: 1px solid var(--border);
+       border-radius: 8px;
+       background: var(--paper);
+       color: var(--green);
+       font-size: 15px;
+     }
+
+      .price-note strong {
+      font-size: 18px;
+     }
+.format-icon {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.format-icon span {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  position: relative;
+}
+
+.icon-child span {
+  border-radius: 50% 50% 35% 35%;
+}
+
+.icon-dog span {
+  border-radius: 50% 50% 45% 45%;
+}
+
+.icon-therapy span {
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.icon-career span {
+  border-radius: 3px;
+  border-width: 2px;
+}
+
+.format-icon span::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  right: -5px;
+  top: -5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        Анастасия Короткова
+<small>Психолог · Канистерапия</small>
+      </a>
+
+      <nav aria-label="Основная навигация">
+        <a href="#about">О специалисте</a>
+        <a href="#formats">Направления</a>
+        <a href="#contacts" class="nav-contact">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Психология и канистерапия</span>
+
+          <h1>
+            Иногда для важного разговора нужен <span>друг на четырёх лапах</span>
+          </h1>
+
+          <p class="hero-text">
+            Психологические занятия с участием золотистого ретривера.
+            Бережный подход, внимание к человеку и формат,
+            который подбирается под запрос.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary"
+               href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
+               target="_blank" rel="noopener noreferrer">
+              Записаться в MAX
+            </a>
+
+            <a class="button button-light" href="#about">
+              Познакомиться
+            </a>
+          </div>
+
+          <p class="hero-note">
+              Кострома · По предварительной записи
+	  </p>
+
+	  <div class="price-note">
+ 	      Стоимость занятий — <strong>от 2 000 ₽</strong>
+	  </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="photo-placeholder" id="photoPlaceholder">
+            <div class="paw">🐾 </div>
+            <strong>Анастасия и её четвероногий помощник</strong>
+            <p>Здесь будет ваша фотография специалиста с золотистым ретривером.</p>
+          </div>
+
+          <img
+            id="heroImage"
+            src="photo.jpg"
+            alt="Анастасия Короткова с золотистым ретривером"
+            onerror="this.style.display='none'"
+            onload="document.getElementById('photoPlaceholder').style.display='none'"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section-white" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>О специалисте</h2>
+          <p>
+            Внимательное отношение, уважение к индивидуальности
+            и пространство, в котором можно быть собой.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="info-card">
+            <h3>Анастасия Короткова</h3>
+            <p>
+              Психолог. Работает с детьми и использует подходы,
+              ориентированные на потребности конкретного человека.
+              В работе также применяет элементы канистерапии —
+              взаимодействия человека с специально подготовленной собакой.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Золотистый ретривер</h3>
+            <p>
+              Четвероногий участник занятий прошёл тестирование
+              в московском центре «Хронос».
+              Участие собаки определяется форматом занятия,
+              её состоянием и индивидуальной ситуацией.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formats">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Направления работы</h2>
+          <p>
+            Формат встречи обсуждается заранее, чтобы подобрать
+            подходящий вариант под конкретный запрос.
+          </p>
+        </div>
+
+        <div class="formats">
+          <article class="format-card">
+            <div class="format-icon icon-child"><span></span></div>
+            <h3>Психологические занятия с детьми</h3>
+            <p>
+              Индивидуальная работа с учётом особенностей ребёнка,
+              его интересов и потребностей.
+            </p>
+          </article>
+
+          <article class="format-card">
+            <div class="format-icon icon-dog"><span></span></div>
+            <h3>Занятия с участием собаки</h3>
+            <p>
+              Взаимодействие с четвероногим помощником в рамках
+              согласованного формата и под руководством специалиста.
+            </p>
+          </article>
+<article class="format-card">
+            <div class="format-icon icon-therapy"><span></span></div>
+            <h3>Детская гештальт-терапия</h3>
+            <p>
+              Работа с опорой на индивидуальный подход
+              и особенности детского восприятия.
+            </p>
+          </article>
+
+          <article class="format-card">
+           <div class="format-icon icon-career"><span></span></div>
+            <h3>Профориентация</h3>
+            <p>
+              Помощь в исследовании интересов, склонностей
+              и возможных направлений профессионального развития.
+            </p>
+          </article>
+        </div>
+
+        <p class="notice">
+          Возможность проведения занятий для организаций
+          обсуждается индивидуально.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-white" id="contacts">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <h2>Давайте познакомимся</h2>
+            <p>
+              Напишите, расскажите о своём запросе —
+              вместе обсудим, какой формат подойдёт.
+            </p>
+          </div>
+
+          <a class="button"
+             href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
+             target="_blank" rel="noopener noreferrer">
+            Написать Анастасии
+          </a>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <strong>MAX</strong>
+            <a href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
+               target="_blank" rel="noopener noreferrer">
+              Написать
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <strong>ВКонтакте</strong>
+            <a href="https://vk.ru/id102057235"
+               target="_blank" rel="noopener noreferrer">
+              Страница Анастасии
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Телефон</strong>
+            <a href="tel:+79203881411">8 920 388-14-11</a>
+          </div>
+        </div>
+
+        <div class="info-card" style="margin-top: 24px;">
+          <h3>Где проходят занятия</h3>
+          <p>
+            Кострома, ул. Центральная, 48Б,
+            помещение «Краски танца».
+            Посещение — по предварительной договорённости.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Анастасия Короткова.
+      Информация на сайте не заменяет медицинскую помощь.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
+
