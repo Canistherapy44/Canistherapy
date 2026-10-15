@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Детский и подростковый психолог и канистерапевт в Костроме — Анастасия Короткова</title>
+  <title>Детский психолог в Костроме — Анастасия Короткова</title>
 
-  <meta name="description" content="Анастасия Короткова — детский и подростковый психолог, специалист по канистерапии в Костроме. Психологические занятия для детей и подростков, занятия с участием обученной собаки, работа с особенностями развития, профориентация.">
+  <meta name="description" content="Анастасия Короткова — детский психолог в Костроме. Детская гештальт-терапия по модели В. Оклендер, занятия с элементами канистерапии, профориентация и индивидуальные консультации.">
 
   <meta name="theme-color" content="#f7f4ec">
+
+  <link rel="canonical" href="https://canistherapy44.github.io/Canistherapy/">
 
   <style>
     :root {
@@ -100,11 +102,13 @@
       align-items: center;
       min-height: 48px;
       padding: 12px 22px;
+      border: 1px solid transparent;
       border-radius: 9px;
       font-size: 14px;
       font-weight: 700;
       text-align: center;
       transition: .2s ease;
+      cursor: pointer;
     }
 
     .button:hover {
@@ -121,15 +125,13 @@
     }
 
     .button-light {
-      border: 1px solid var(--border);
+      border-color: var(--border);
       background: var(--paper);
     }
 
     .button-light:hover {
       background: var(--green-light);
     }
-
-    /* HERO */
 
     .hero {
       padding: 72px 0 78px;
@@ -154,10 +156,7 @@
       text-transform: uppercase;
     }
 
-    h1,
-    h2,
-    h3,
-    p {
+    h1, h2, h3, p {
       margin-top: 0;
     }
 
@@ -199,13 +198,11 @@
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: cover;
-      object-position: center;
+      object-position: center 25%;
       border-radius: 22px;
       box-shadow: 0 18px 45px rgba(38, 57, 45, .12);
       background: var(--green-light);
     }
-
-    /* SECTIONS */
 
     section {
       padding: 76px 0;
@@ -233,8 +230,6 @@
       color: var(--muted);
     }
 
-    /* ABOUT */
-
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -261,21 +256,19 @@
       color: var(--text);
     }
 
-    
-.about-photo {
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
-  object-position: center top;
-  border-radius: 18px;
-  background: var(--green-light);
-}
-    /* CARDS */
+    .about-photo {
+      width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center top;
+      border-radius: 18px;
+      background: var(--green-light);
+    }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
 
@@ -315,8 +308,6 @@
       color: var(--muted);
       font-size: 15px;
     }
-
-    /* CANISTERAPY */
 
     .canis-grid {
       display: grid;
@@ -368,8 +359,6 @@
       font-weight: 700;
     }
 
-    /* STEPS */
-
     .steps {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -394,8 +383,6 @@
       color: var(--muted);
       font-size: 15px;
     }
-
-    /* PRICE */
 
     .price-card {
       max-width: 560px;
@@ -424,8 +411,6 @@
       color: var(--muted);
     }
 
-    /* CONTACTS */
-
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -453,8 +438,6 @@
       margin-top: 10px;
     }
 
-    /* CTA */
-
     .final-cta {
       padding: 56px 25px;
       border-radius: 20px;
@@ -470,7 +453,7 @@
     }
 
     .final-cta p {
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto 24px;
       color: #e4e9e2;
     }
@@ -480,8 +463,6 @@
       color: var(--green-dark);
     }
 
-    /* FOOTER */
-
     footer {
       padding: 25px 0;
       color: var(--muted);
@@ -489,10 +470,7 @@
       text-align: center;
     }
 
-    /* TABLET */
-
     @media (max-width: 800px) {
-
       .hero {
         padding: 48px 0 58px;
       }
@@ -509,11 +487,6 @@
         aspect-ratio: 4 / 3;
       }
 
-      .about-photo,
-      .canis-photo {
-        aspect-ratio: 4 / 3;
-      }
-
       .cards {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -527,10 +500,7 @@
       }
     }
 
-    /* MOBILE */
-
     @media (max-width: 560px) {
-
       .container {
         width: min(100% - 28px, 1120px);
       }
@@ -610,557 +580,271 @@
 </head>
 
 <body>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        Анастасия Короткова
+        <small>Детский психолог · Гештальт-терапия · Канистерапия</small>
+      </a>
 
-<header>
-  <div class="container header-inner">
+      <nav aria-label="Основная навигация">
+        <a href="#about">О специалисте</a>
+        <a href="#services">Направления</a>
+        <a href="#canistherapy">Канистерапия</a>
+        <a href="#price">Стоимость</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
 
-    <a class="brand" href="#top">
-      Анастасия Короткова
-      <small>Детский и подростковый психолог · Канистерапия</small>
-    </a>
+  <main id="top">
 
-    <nav aria-label="Основная навигация">
-      <a href="#about">О специалисте</a>
-      <a href="#services">Направления</a>
-      <a href="#canistherapy">Канистерапия</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
+    <!-- Первый экран -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Кострома · Психология и канистерапия</span>
 
-  </div>
-</header>
+          <h1>Детский психолог в <span>Костроме</span></h1>
 
+          <p class="hero-text">
+            <strong>Детская гештальт-терапия по модели В. Оклендер.</strong>
+            Поддержка, понимание, развитие, уверенность.
+            Психологические занятия с детьми и подростками,
+            профориентация и индивидуальные консультации.
+          </p>
 
-<main id="top">
+          <div class="button-row">
+            <a
+              class="button button-primary"
+              href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Записаться в MAX</a>
 
-  <!-- ГЛАВНЫЙ ЭКРАН -->
+            <a
+              class="button button-light"
+              href="https://vk.ru/id102057235"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Написать ВКонтакте</a>
+          </div>
 
-  <section class="hero">
+          <div class="price-note">
+            Стоимость занятия — <strong>от 1 700 ₽</strong>
+          </div>
+        </div>
 
-    <div class="container hero-grid">
-
-      <div>
-
-        <span class="eyebrow">
-          Кострома · Психология и канистерапия
-        </span>
-
-        <h1>
-          Детский и подростковый
-          <span>психолог</span>
-          в Костроме
-        </h1>
-
-        <p class="hero-text">
-          Психологические занятия для детей и подростков
-          с учётом индивидуальных особенностей, интересов
-          и запроса семьи.
-        </p>
-
-        <div class="button-row">
-
-          <a
-            class="button button-primary"
-            href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div>
+          <img
+            class="hero-photo"
+            src="photo.jpg"
+            alt="Анастасия Короткова — детский психолог"
+            fetchpriority="high"
           >
-            Записаться в MAX
-          </a>
+        </div>
+      </div>
+    </section>
 
-          <a
-            class="button button-light"
-            href="https://vk.ru/id102057235"
-            target="_blank"
-            rel="noopener noreferrer"
+    <!-- О специалисте -->
+    <section class="section-white" id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="eyebrow">О специалисте</span>
+
+          <h2>Анастасия Короткова</h2>
+
+          <p>
+            Детский психолог. В работе я стремлюсь создать атмосферу
+            поддержки и понимания, в которой ребёнок может лучше узнать
+            себя, разобраться в своих чувствах и постепенно обрести уверенность.
+          </p>
+
+          <p>
+            Мне нравится помогать людям исследовать себя, видеть собственную
+            важность и ценность, учиться новому, справляться с трудностями
+            и радоваться жизни.
+          </p>
+
+          <div class="about-note">
+            <strong>Профессиональное развитие</strong><br>
+            В настоящее время я прохожу обучение по направлению дефектологии
+            и расширяю знания об особенностях развития детей.
+          </div>
+        </div>
+
+        <div>
+          <img
+            class="about-photo"
+            src="about.jpg"
+            alt="Анастасия Короткова — психолог"
+            loading="lazy"
           >
-            Написать ВКонтакте
-          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- Направления работы -->
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Направления работы</span>
+
+          <h2>Чем я могу помочь</h2>
+
+          <p>
+            Формат встреч зависит от возраста, ситуации и запроса
+            ребёнка, подростка или семьи.
+          </p>
         </div>
 
-        <div class="price-note">
-          Стоимость занятия — <strong>от 1 700 ₽</strong>
+        <div class="cards">
+          <article class="card">
+            <div class="card-number">01</div>
+
+            <h3>Детская гештальт-терапия по модели В. Оклендер</h3>
+
+            <p>
+              Психологические занятия с детьми и подростками.
+              Поддержка в исследовании себя, понимании чувств,
+              развитии уверенности и поиске способов справляться с трудностями.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+
+            <h3>Занятия с элементами канистерапии</h3>
+
+            <p>
+              Взаимодействие с обученной и подготовленной собакой помогает
+              создать доверительную атмосферу. В зависимости от запроса
+              занятия могут затрагивать познавательную, коммуникативную
+              и эмоциональную сферы.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+
+            <h3>Профориентация</h3>
+
+            <p>
+              Диагностика, несколько встреч и заключение с рекомендациями
+              по подходящим направлениям обучения и учебным заведениям.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">04</div>
+
+            <h3>Индивидуальные консультации</h3>
+
+            <p>
+              Детско-родительские отношения, конфликты, трудности взросления
+              и общения, сложные чувства, страхи, горе, травматический опыт
+              и жизненные кризисы.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Канистерапия -->
+    <section class="section-white" id="canistherapy">
+      <div class="container canis-grid">
+        <div>
+          <span class="eyebrow">Канистерапия</span>
+
+          <h2>Психология и взаимодействие с собакой</h2>
+
+          <p>
+            Занятия с элементами канистерапии проходят с участием обученной
+            и подготовленной собаки. Взаимодействие с животным может помочь
+            создать более доверительную атмосферу и стать дополнительным
+            инструментом психологической работы.
+          </p>
+
+          <p>
+            В ходе занятия могут использоваться возможности для тактильного
+            контакта, если он комфортен ребёнку, а задания подбираются
+            с учётом индивидуальных особенностей и запроса.
+          </p>
+
+          <ul class="check-list">
+            <li>Внимание к эмоциональному состоянию ребёнка</li>
+            <li>Поддержка общения и взаимодействия</li>
+            <li>Задания с учётом познавательной сферы</li>
+            <li>Индивидуальный подбор формата встречи</li>
+          </ul>
         </div>
 
+        <div>
+          <img
+            class="canis-photo"
+            src="canistherapy.jpg"
+            alt="Занятие с участием обученной и подготовленной собаки"
+            loading="eager"
+          >
+        </div>
       </div>
+    </section>
 
+    <!-- Как начать -->
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Как начать</span>
 
-      <div>
+          <h2>Три простых шага</h2>
 
-        <img
-          class="hero-photo"
-          src="photo.jpg"
-          alt="Анастасия Короткова — детский и подростковый психолог"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- О СПЕЦИАЛИСТЕ -->
-
-  <section class="section-white" id="about">
-
-    <div class="container about-grid">
-
-      <div>
-
-        <span class="eyebrow">
-          О специалисте
-        </span>
-
-        <h2>
-          Анастасия Короткова
-        </h2>
-
-        <p>
-          Детский и подростковый психолог. В работе важно
-          создать пространство, где ребёнка или подростка
-          слышат, принимают и помогают разобраться
-          в собственных переживаниях.
-        </p>
-
-        <p>
-          В зависимости от запроса подбирается подходящий
-          формат работы с учётом возраста, особенностей
-          и индивидуальной ситуации.
-        </p>
-
-        <div class="about-note">
-          <strong>Дополнительное профессиональное обучение</strong><br>
-          В настоящее время прохожу обучение по направлению
-          дефектологии, расширяя профессиональные знания
-          в работе с детьми с особенностями развития.
+          <p>
+            Чтобы обсудить ситуацию и подобрать подходящий формат занятий.
+          </p>
         </div>
 
-      </div>
-
-
-      <div>
-
-        <img
-          class="about-photo"
-          src="about.jpg"
-          alt="Анастасия Короткова"
-          loading="lazy"
-        >
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- НАПРАВЛЕНИЯ -->
-
-  <section id="services">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <span class="eyebrow">
-          Направления работы
-        </span>
-
-        <h2>
-          С чем можно обратиться
-        </h2>
-
-        <p>
-          Формат и содержание встреч подбираются
-          индивидуально в зависимости от возраста
-          и запроса.
-        </p>
-
-      </div>
-
-
-      <div class="cards">
-
-
-        <article class="card">
-
-          <div class="card-number">
-            01
+        <div class="steps">
+          <div class="step">
+            <strong>1. Напишите мне</strong>
+            <p>
+              Расскажите о возрасте ребёнка или подростка и ситуации,
+              которую хотелось бы обсудить.
+            </p>
           </div>
 
-          <h3>
-            Психологические занятия для детей и подростков
-          </h3>
-
-          <p>
-            Детская и подростковая гештальт-терапия,
-            психологические занятия с учётом возраста,
-            индивидуальных особенностей и запроса.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <div class="card-number">
-            02
+          <div class="step">
+            <strong>2. Обсудим запрос</strong>
+            <p>
+              Уточним детали, ожидания и возможный формат психологической работы.
+            </p>
           </div>
 
-          <h3>
-            Занятия с участием обученной и подготовленной собаки
-          </h3>
-
-          <p>
-            Психологические занятия с участием собаки
-            в рамках канистерапии. Формат взаимодействия
-            подбирается с учётом особенностей ребёнка.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <div class="card-number">
-            03
+          <div class="step">
+            <strong>3. Договоримся о встрече</strong>
+            <p>
+              Согласуем удобное время и организационные детали.
+            </p>
           </div>
-
-          <h3>
-            Работа с детьми с особенностями развития
-          </h3>
-
-          <p>
-            Дополнительное направление профессионального
-            развития — обучение по дефектологии и изучение
-            особенностей сопровождения детей с особенностями развития.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <div class="card-number">
-            04
-          </div>
-
-          <h3>
-            Профориентация
-          </h3>
-
-          <p>
-            Помощь детям и подросткам в исследовании
-            интересов, склонностей и возможных направлений
-            дальнейшего обучения и профессионального развития.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <div class="card-number">
-            05
-          </div>
-
-          <h3>
-            Поддержка родителей
-          </h3>
-
-          <p>
-            Обсуждение сложностей во взаимодействии
-            с ребёнком или подростком и поиск подходящих
-            способов поддержки.
-          </p>
-
-        </article>
-
-
-        <article class="card">
-
-          <div class="card-number">
-            06
-          </div>
-
-          <h3>
-            Индивидуальный подход
-          </h3>
-
-          <p>
-            Сначала обсуждаем ситуацию и запрос,
-            затем определяем наиболее подходящий
-            формат психологической работы.
-          </p>
-
-        </article>
-
-
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </section>
-
-
-  <!-- КАНИСТЕРАПИЯ -->
-
-  <section class="section-white" id="canistherapy">
-
-    <div class="container canis-grid">
-
-
-      <div>
-
-        <span class="eyebrow">
-          Канистерапия
-        </span>
-
-        <h2>
-          Психология и взаимодействие с собакой
-        </h2>
-
-        <p>
-          Канистерапия — направление, в котором
-          специально подготовленная собака участвует
-          в психологической или развивающей работе
-          вместе со специалистом.
-        </p>
-
-        <p>
-          Взаимодействие с собакой может стать дополнительным
-          инструментом во время занятия: помочь установить
-          контакт, сделать упражнения более естественными
-          и создать комфортную атмосферу для ребёнка.
-        </p>
-
-        <ul class="check-list">
-
-          <li>
-            Занятия с участием обученной и подготовленной собаки
-          </li>
-
-          <li>
-            Индивидуальный подбор формата взаимодействия
-          </li>
-
-          <li>
-            Внимание к эмоциональному состоянию ребёнка
-          </li>
-
-          <li>
-            Работа в рамках психологического запроса
-          </li>
-
-        </ul>
-
-      </div>
-
-
-      <div>
-
-       <img
-  class="canis-photo"
-  src="https://canistherapy44.github.io/Canistherapy/canistherapy.jpg"
-  alt="Занятие по канистерапии с участием собаки"
-  loading="eager"
-> 
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- КАК ПРОХОДИТ -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <span class="eyebrow">
-          Как начать
-        </span>
-
-        <h2>
-          Три простых шага
-        </h2>
-
-        <p>
-          Чтобы обсудить ситуацию и подобрать
-          подходящий формат занятий.
-        </p>
-
-      </div>
-
-
-      <div class="steps">
-
-
-        <div class="step">
-
-          <strong>
-            1. Напишите мне
-          </strong>
-
-          <p>
-            Расскажите о возрасте ребёнка или подростка
-            и ситуации, которую хотелось бы обсудить.
-          </p>
-
+    <!-- Стоимость -->
+    <section class="section-white" id="price">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Стоимость</span>
+          <h2>Условия занятий</h2>
         </div>
 
+        <div class="price-card">
+          <h3>Психологическое занятие</h3>
 
-        <div class="step">
-
-          <strong>
-            2. Обсудим запрос
-          </strong>
+          <div class="price">от 1 700 ₽</div>
 
           <p>
-            Уточним детали и определим, какой формат
-            встречи может подойти.
-          </p>
-
-        </div>
-
-
-        <div class="step">
-
-          <strong>
-            3. Договоримся о встрече
-          </strong>
-
-          <p>
-            Согласуем удобное время и обсудим
-            организационные детали.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- СТОИМОСТЬ -->
-
-  <section class="section-white" id="price">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <span class="eyebrow">
-          Стоимость
-        </span>
-
-        <h2>
-          Условия занятий
-        </h2>
-
-      </div>
-
-
-      <div class="price-card">
-
-        <h3>
-          Психологическое занятие
-        </h3>
-
-        <div class="price">
-          от 1 700 ₽
-        </div>
-
-        <p>
-          Точная стоимость зависит от выбранного
-          формата занятия и обсуждается при записи.
-        </p>
-
-        <a
-          class="button button-primary"
-          href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Уточнить и записаться
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- КОНТАКТЫ -->
-
-  <section id="contacts">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <span class="eyebrow">
-          Контакты
-        </span>
-
-        <h2>
-          Давайте обсудим ваш запрос
-        </h2>
-
-        <p>
-          Напишите удобным способом, чтобы уточнить детали
-          и договориться о встрече.
-        </p>
-
-      </div>
-
-
-      <div class="contact-grid">
-
-
-        <div class="contact-card">
-
-          <h3>
-            Место проведения
-          </h3>
-
-          <p>
-            <strong>Кострома</strong>
-          </p>
-
-          <p>
-            ул. Центральная, 48Б
-          </p>
-
-          <p>
-            Помещение «Краски танца»
-          </p>
-
-          <p>
-            Приём по предварительной записи.
-          </p>
-
-        </div>
-
-
-        <div class="contact-card">
-
-          <h3>
-            Связаться со мной
-          </h3>
-
-          <p>
-            Выберите удобный способ связи.
+            Стоимость зависит от формата встречи.
+            Уточнить условия можно при записи.
           </p>
 
           <a
@@ -1168,80 +852,91 @@
             href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            Написать в MAX
-          </a>
+          >Уточнить и записаться</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Контакты</span>
+
+          <h2>Давайте обсудим ваш запрос</h2>
+
+          <p>
+            Напишите удобным способом, чтобы уточнить детали
+            и договориться о встрече.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Место проведения</h3>
+
+            <p><strong>Кострома</strong></p>
+            <p>ул. Центральная, 48Б</p>
+            <p>Помещение «Краски танца»</p>
+            <p>Приём по предварительной записи.</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Связаться со мной</h3>
+
+            <p>Выберите удобный способ связи.</p>
+
+            <a
+              class="button button-primary"
+              href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Написать в MAX</a>
+
+            <a
+              class="button button-light"
+              href="https://vk.ru/id102057235"
+              target="_blank"
+              rel="noopener noreferrer"
+            >ВКонтакте</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Завершающий блок -->
+    <section>
+      <div class="container">
+        <div class="final-cta">
+          <h2>Каждый ребёнок уникален</h2>
+
+          <p>
+            Начать можно с простого разговора: расскажите, что вас беспокоит
+            или какую задачу вы хотели бы обсудить. Вместе определим
+            возможные дальнейшие шаги.
+          </p>
 
           <a
             class="button button-light"
-            href="https://vk.ru/id102057235"
+            href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
             target="_blank"
             rel="noopener noreferrer"
-          >
-            ВКонтакте
-          </a>
-
+          >Написать Анастасии</a>
         </div>
-
-
       </div>
+    </section>
 
-    </div>
+  </main>
 
-  </section>
-
-
-  <!-- ФИНАЛЬНЫЙ ПРИЗЫВ -->
-
-  <section>
-
+  <footer>
     <div class="container">
-
-      <div class="final-cta">
-
-        <h2>
-          Начнём со знакомства
-        </h2>
-
-        <p>
-          Расскажите, что вас беспокоит или какую задачу
-          вы хотели бы решить. Вместе обсудим возможные
-          варианты работы.
-        </p>
-
-        <a
-          class="button button-light"
-          href="https://max.ru/u/f9LHodD0cOIVVjwlR6P7Cgf5oyTX4jiJueMAU9O4wO98xQCz4mvxdMwvyzc"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Написать Анастасии
-        </a>
-
-      </div>
-
+      © <span id="year"></span> Анастасия Короткова · Кострома
     </div>
+  </footer>
 
-  </section>
-
-
-</main>
-
-
-<footer>
-
-  <div class="container">
-
-    © <span id="year"></span> Анастасия Короткова · Кострома
-
-  </div>
-
-</footer>
-
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
