@@ -576,38 +576,7 @@
         border-radius: 15px;
       }
     }
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {
-            if (document.scripts[j].src === r) { return; }
-        }
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],
-        k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document, 'script',
-       'https://mc.yandex.ru/metrika/tag.js?id=113655689', 'ym');
 
-    ym(113655689, 'init', {
-        ssr: true,
-        webvisor: true,
-        clickmap: true,
-        ecommerce: "dataLayer",
-        referrer: document.referrer,
-        url: location.href,
-        accurateTrackBounce: true,
-        trackLinks: true
-    });
-</script>
-<noscript>
-    <div>
-        <img src="https://mc.yandex.ru/watch/113655689"
-             style="position:absolute; left:-9999px;"
-             alt="" />
-    </div>
-</noscript>
-<!-- /Yandex.Metrika counter -->
     
 #price .section-heading {
   margin-bottom: 16px;
@@ -987,5 +956,148 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
+
+  
+<!-- Уведомление об аналитике -->
+<div id="cookie-notice" class="cookie-notice" role="dialog"
+     aria-label="Настройки аналитики" hidden>
+  <div class="cookie-notice-text">
+    <strong>Мы используем Яндекс Метрику</strong>
+    <p>
+      Она помогает понять, как посетители используют сайт.
+      Аналитика запускается только с вашего согласия.
+    </p>
+    <a href="privacy.html">Политика обработки персональных данных</a>
+  </div>
+
+  <div class="cookie-notice-buttons">
+    <button type="button" id="cookie-accept">Принять</button>
+    <button type="button" id="cookie-reject">Отказаться</button>
+  </div>
+</div>
+
+<style>
+  .cookie-notice {
+    position: fixed;
+    z-index: 9999;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fffdf8;
+    color: #303b33;
+    border: 1px solid #e3e0d6;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.15);
+    font-size: 14px;
+  }
+
+  .cookie-notice[hidden] {
+    display: none;
+  }
+
+  .cookie-notice-text p {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  .cookie-notice a {
+    color: #426b58;
+    text-decoration: underline;
+  }
+
+  .cookie-notice-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .cookie-notice-buttons button {
+    padding: 11px 18px;
+    border: 1px solid #426b58;
+    border-radius: 9px;
+    background: #fffdf8;
+    color: #303b33;
+    cursor: pointer;
+    font: inherit;
+  }
+
+  .cookie-notice-buttons #cookie-accept {
+    background: #426b58;
+    color: white;
+  }
+
+  @media (max-width: 480px) {
+    .cookie-notice {
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      padding: 16px;
+    }
+  }
+</style>
+
+<script>
+(function () {
+  const notice = document.getElementById('cookie-notice');
+  const accept = document.getElementById('cookie-accept');
+  const reject = document.getElementById('cookie-reject');
+  const consentKey = 'canistherapy-metrika-consent';
+  const metrikaId = 113655689;
+
+  function loadMetrika() {
+    if (window.metrikaLoaded) return;
+    window.metrikaLoaded = true;
+
+    (function(m, e, t, r, i, k, a) {
+      m[i] = m[i] || function() {
+        (m[i].a = m[i].a || []).push(arguments);
+      };
+      m[i].l = 1 * new Date();
+
+      for (let j = 0; j < document.scripts.length; j++) {
+        if (document.scripts[j].src === r) return;
+      }
+
+      k = e.createElement(t);
+      a = e.getElementsByTagName(t)[0];
+      k.async = 1;
+      k.src = r;
+      a.parentNode.insertBefore(k, a);
+    })(window, document, 'script',
+       'https://mc.yandex.ru/metrika/tag.js?id=' + metrikaId, 'ym');
+
+    ym(metrikaId, 'init', {
+      clickmap: true,
+      trackLinks: true,
+      accurateTrackBounce: true,
+      webvisor: true
+    });
+  }
+
+  const savedConsent = localStorage.getItem(consentKey);
+
+  if (savedConsent === 'accepted') {
+    loadMetrika();
+  } else if (!savedConsent) {
+    notice.hidden = false;
+  }
+
+  accept.addEventListener('click', function() {
+    localStorage.setItem(consentKey, 'accepted');
+    notice.hidden = true;
+    loadMetrika();
+  });
+
+  reject.addEventListener('click', function() {
+    localStorage.setItem(consentKey, 'rejected');
+    notice.hidden = true;
+  });
+})();
+</script>
+</body>
 </body>
 </html>
