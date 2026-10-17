@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://canistherapy44.github.io/Canistherapy/sitemap.xml
